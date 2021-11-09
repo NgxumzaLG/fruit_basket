@@ -30,7 +30,7 @@ module.exports = function(data) {
     async function updateFruitBasket(update) {
         let updateQty =[update.fruitname, update.quantity]
 
-        await pool.query('UPDATE fruit_basket SET quantity = $2 WHERE fruit_type = $1', updateQty);
+        await pool.query('UPDATE fruit_basket SET quantity = quantity + $2 WHERE fruit_type = $1', updateQty);
     }
 
     async function getTotalPrice(theFruit) {

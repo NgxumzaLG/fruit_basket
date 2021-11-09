@@ -42,7 +42,7 @@ describe('Fruit basket' , function(){
 		await fruitBasket.addFruit({fruitname: 'Apple', quantity: 12, price: 2.50});
 		await fruitBasket.addFruit({fruitname: 'Banana', quantity: 8, price: 1.50});
 
-		await fruitBasket.updateFruitBasket({fruitname: 'Banana', quantity: 15});
+		await fruitBasket.updateFruitBasket({fruitname: 'Banana', quantity: 7});
 
 		assert.deepEqual({fruit_type: 'Banana', quantity: 15, price: 1.50}, await fruitBasket.findFruitBasket('Banana'));
 	});
